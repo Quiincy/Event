@@ -12,8 +12,10 @@ document.addEventListener('keydown', (event) => {
 
 const buttons = document.querySelectorAll('.btn');
 
+
 document.addEventListener('click', (event) => {
-    if (event.target.closest('.btn')) {
+    const closestTarget = event.target.closest('.btn')
+    if (closestTarget) {
         buttons.forEach(function(element, index) {
             if (element.lastElementChild.innerText == event.path[1].lastElementChild.innerHTML) {
                 soundTrack[index].play();
@@ -21,3 +23,5 @@ document.addEventListener('click', (event) => {
         });
     }
 })
+
+
