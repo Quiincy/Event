@@ -16,11 +16,11 @@ document.addEventListener('keydown', (event) => {
 })
 
 
-document.addEventListener('click', (event) => {
+document.addEventListener('click', (event)=> {
     const closestTarget = event.target.closest('.btn')
     if (closestTarget) {
         buttons.forEach(function goplay(element, index) {
-            if (element.lastElementChild.innerText == event.path[1].lastElementChild.innerHTML) {
+            if (element.lastElementChild.innerText == event.path[0].lastElementChild.innerHTML) {
                 buttons[index].classList.add('playing')
                 setTimeout(() => {
                     buttons[index].classList.remove('playing')
